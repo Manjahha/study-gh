@@ -5,5 +5,3 @@ nn=number*2
 nnn=number*3
 x=int(number)+int(nn)+int(nnn)
 print (x)
-
-

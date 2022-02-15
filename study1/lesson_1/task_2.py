@@ -2,10 +2,14 @@
 # Переведите время в часы, минуты, секунды и
 # выведите в формате чч:мм:сс. Используйте форматирование строк.
 seconds=int(input ('Введите время в секундах: '))
-hour= seconds/3600
-minut=(seconds%3600)/60
-sec=minut%60
-print (f"{hour}часов, {minut} минут, {sec} секунд")
+
+if seconds < 60:
+    print (f'00:00:{seconds:02}')
+elif seconds < 3600:
+    print (f'00:{seconds//60:02}: {seconds%60:02}')
+else:
+    print (f'{seconds//3600:02}:{(seconds%3600)//60:02}:{seconds%60:02}')
+
 
 
 
